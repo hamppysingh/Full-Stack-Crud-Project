@@ -18,17 +18,25 @@ function Create(){
         redirect('/');
     }
     return(
-        <div>
+        <div className="d-flex vh-100 p-3 mb-2 bg-success text-white justify-content-center align-items-center">
+        <div className="w-50 bg-dark rounded p-3">
             <h1>Enter Car Details:</h1>
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="carname">
-                Enter Name : </label>
-                <input type="text" name="carname" onChange={e=>setData({...data,name:e.target.value})}/>
-
+            <hr/>
+            <form className="form-inline"onSubmit={handleSubmit}>
+            <div class="form-group mb-2">
+               <label htmlFor="carname" class="sr-only">
+                Enter Name : </label><br/><br/>
+                <input type="text" name="carname" class="form-control bg-white " onChange={e=>setData({...data,name:e.target.value})}/>
+            </div>
+            <div class="form-group mb-2">
                 <label htmlFor="carcolor">Enter Color:</label>
-                <input type="text" name="carcolor" onChange={e=>setData({...data,color:e.target.value})}/>
-                <button type="submit">Add</button>
+                <br/><br/>
+                <input type="text" name="carcolor" class="form-control bg-white " onChange={e=>setData({...data,color:e.target.value})}/>
+            </div>
+            <br/>
+                <button type="submit" className="btn btn-primary">Insert</button>
             </form>
+            </div>
         </div>
     )
 }

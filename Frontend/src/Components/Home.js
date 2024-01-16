@@ -15,13 +15,15 @@ function Home(){
         .catch(err=>console.log(err));
     }
     return(
-        <div>
-            <h1>Car Links</h1>
-            <div>
-                <Link to="/Create" >Create +</Link>
+        <div className="d-flex vh-100 p-3 mb-2 bg-success text-white justify-content-center align-items-center">
+            <div className="w-50 bg-dark rounded p-3">
+            <h1 align="center">Car Details</h1>
+            <div align="right">
+                <Link to="/Create" className="btn btn-success">Create +</Link>
             </div>
-            <table>
-                <thead>
+            <hr/>
+            <table width='100%' className="table table-hover text-center" style={{borderRadius: '5px', overflow: 'hidden'}}>
+                <thead className="h4" >
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
@@ -35,12 +37,16 @@ function Home(){
                             <td>{car.id}</td>
                             <td>{car.name}</td>
                             <td>{car.color}</td>
-                            <td><Link to={`/update/${car.id}`}>Edit</Link><button onClick={()=>handleDelete(car.id)}>Delete</button></td>
+                            <td className="d-flex justify-content-around">
+                                <Link to={`/update/${car.id}`} className="btn btn-primary">Update</Link>
+                                <button className="btn btn-danger"onClick={()=>handleDelete(car.id)}>Delete</button>
+                            </td>
                         </tr>
                     ))
                 }
                 </tbody>
             </table>
+            </div>
         </div>
     )
 }
