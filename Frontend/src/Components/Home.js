@@ -16,14 +16,17 @@ function Home(){
     }
     return(
         <div className="d-flex vh-100 p-3 mb-2 bg-success text-white justify-content-center align-items-center">
-            <div className="w-50 bg-dark rounded p-3">
+            <div className="w-50 bg-dark rounded p-3" >
             <h1 align="center">Car Details</h1>
             <div align="right">
                 <Link to="/Create" className="btn btn-success">Create +</Link>
             </div>
             <hr/>
-            <table width='100%' className="table table-hover text-center" style={{borderRadius: '5px', overflow: 'hidden'}}>
-                <thead className="h4" >
+            <div style={{ maxHeight: "350px", 
+        overflowY: "auto" }}>
+            <table width='100%' className="table table-hover text-center" style={{borderRadius: '5px',overflow: 'scroll'}}>
+                <thead className="h3" style={{ position: "sticky", 
+        top: "0" }}>
                 <tr>
                     <th>Id</th>
                     <th>Name</th>
@@ -31,7 +34,7 @@ function Home(){
                     <th>Action</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody >
                     {data.map((car)=>(
                         <tr key={car.id}>
                             <td>{car.id}</td>
@@ -46,6 +49,7 @@ function Home(){
                 }
                 </tbody>
             </table>
+            </div>
             </div>
         </div>
     )
