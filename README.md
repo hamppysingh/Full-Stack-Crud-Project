@@ -1,2 +1,6 @@
 # Full-Stack-Crud-Project
 This project shows the CRUD operation done on MySQL database with ExpressJS as Backend and React integration on front-end
+
+Steps for Back-End :
+1. npm install : Type this command to install the Back-End Dependencies...See package.json for Dependencies...
+2. npm start : This command will start the server with MySQL connectivity....
