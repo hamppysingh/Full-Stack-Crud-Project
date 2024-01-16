@@ -12,6 +12,7 @@ Steps for Database ( Open cmd promt or MySQL Command Line Client ) :
   
   4. create table car(id int auto_increment,name varchar(50),color varchar(50),primary key(id)); : This command will create the table name car...
 * Open dbconnect.js in dbconnect folder ( if the database is already created do this )
+  
   5. change the password of localhost to your corresponding sql password...
 
 Steps for Back-End :
